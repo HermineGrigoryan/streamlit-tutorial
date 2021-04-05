@@ -1,6 +1,10 @@
+# It is a good practice to create functions in a separate .py file and 
+# import it in the main 'app' file when your code gets big. 
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
+
 
 def top_barplot(data, x, y, col, n_obs):
     fig = px.bar(data.sort_values(x, ascending=False).iloc[:n_obs].sort_values(x),
